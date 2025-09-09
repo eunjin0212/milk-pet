@@ -4,7 +4,12 @@
     "slug": "milk-pet",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/logo.svg",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "icon": "./assets/images/logo.svg",
     "scheme": "milkpet",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -33,7 +38,8 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
