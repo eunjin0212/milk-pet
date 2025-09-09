@@ -5,15 +5,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function WelcomeScreen() {
   const router = useRouter();
 
+  const TEXT_CLASS = 'text-xl font-bold leading-normal tracking-tighter text-center text-neutral-800'
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
       <ScrollView
         contentContainerStyle={{
           minHeight: "100%",
-          paddingHorizontal: 24,
-          paddingTop: 24,
-          paddingBottom: 24,
-          justifyContent: "space-between",
+          paddingHorizontal: 10,
+          justifyContent: "center",
         }}
         bounces={false}
         showsVerticalScrollIndicator={false}
@@ -23,41 +22,35 @@ export default function WelcomeScreen() {
           {/* logo */}
           <Image
             source={require("@/assets/images/logo.svg")}
-            style={{ width: 200, height: 200, resizeMode: "contain" }}
+            className='w-[9.313rem] h-[10.875rem] mb-[3.75rem]'
+            resizeMode='contain'
           />
 
           <Text
-            className='text-xl font-bold leading-normal tracking-tighter text-center text-neutral-800'
+            className={`${TEXT_CLASS} mb-[1.875rem]`}
           >
             우리집 같은 옆집,{'\n'}
             믿을 수 있는 케어
           </Text>
 
           <Text
-            className='text-xl font-bold leading-normal tracking-tighter text-center text-neutral-800'
+            className={`${TEXT_CLASS} mb-[7rem]`}
           >
             우리집 막내의 두번째 집,{'\n'}
             우유펫에서 만나요
           </Text>
         </View>
 
-        <View style={{ gap: 12 }}>
-          <Pressable
-            onPress={() => router.push("/home")} // API 없이 UI 전환만
-            style={{
-              backgroundColor: "#3B82F6", // 파란색
-              paddingVertical: 16,
-              borderRadius: 16,
-              alignItems: "center",
-            }}
-            accessibilityRole="button"
-            accessibilityLabel="본인 인증하기"
-          >
-            <Text style={{ color: "#fff", fontSize: 16, fontWeight: "700" }}>
-              본인 인증하기
-            </Text>
-          </Pressable>
-        </View>
+        <Pressable
+          onPress={() => router.push("/home")}
+          className='w-full h-[3.125rem] bg-main rounded-base flex items-center justify-center max-w-[21.25rem] mx-auto'
+          accessibilityRole="button"
+          accessibilityLabel="본인 인증하기"
+        >
+          <Text className='font-bold tracking-tight text-center text-white'>
+            본인 인증하기
+          </Text>
+        </Pressable>
       </ScrollView>
     </SafeAreaView>
   );

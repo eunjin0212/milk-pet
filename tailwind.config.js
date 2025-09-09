@@ -4,6 +4,15 @@ module.exports = {
   presets: [require("nativewind/preset")],
   theme: {
     extend: {
+      colors: {
+        main: '#339DEE'
+      },
+      borderRadius: {
+        'base': '0.625rem'
+      },
+      space: {
+        'base': '0.625rem'
+      },
       fontFamily: {
         sans: ["Pretendard"],
         pretendard: ["Pretendard"],
