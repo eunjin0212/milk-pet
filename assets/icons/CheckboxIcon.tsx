@@ -1,0 +1,8 @@
+import { SVGProps } from 'react';
+
+const CheckboxIcon = ({ ...props }: SVGProps<SVGSVGElement>) => (
+  <svg {...props} width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 3.14286L4.91304 7L11 1" stroke="currentColor" strokeWidth="1.5" />
+  </svg>
+)
+export default CheckboxIcon;

@@ -5,13 +5,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        main: '#339DEE'
+        main: '#339DEE',
+        gray: {
+          light: '#ECECEC',
+          dark: '#5A5A5A'
+        }
       },
       borderRadius: {
         'base': '0.625rem'
       },
       space: {
-        'base': '0.625rem'
+        'base': '0.625rem', // 10px
       },
       fontFamily: {
         sans: ["Pretendard"],
