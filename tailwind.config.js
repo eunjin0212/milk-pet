@@ -12,7 +12,8 @@ module.exports = {
         }
       },
       borderRadius: {
-        'base': '0.625rem'
+        'base': '0.625rem',
+        'bottom-lg': '1.25rem 1.25rem 0 0',
       },
       space: {
         'base': '0.625rem', // 10px
