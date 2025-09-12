@@ -1,9 +1,11 @@
-import { useRouter } from "expo-router";
+import BottomSheet from '@/components/auth/BottomSheet';
+import Checkbox from '@/components/ui/Checkbox';
+import { useState } from 'react';
 import { Image, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function WelcomeScreen() {
-  const router = useRouter();
+  const [open, setOpen] = useState(false);
 
   const TEXT_CLASS = 'text-xl font-bold leading-normal tracking-tighter text-center text-neutral-800'
   return (
@@ -40,9 +42,8 @@ export default function WelcomeScreen() {
             우유펫에서 만나요
           </Text>
         </View>
-
         <Pressable
-          onPress={() => router.push("/home")}
+          onPress={() => setOpen(true)}
           className='w-full h-[3.125rem] bg-main rounded-base flex items-center justify-center max-w-[21.25rem] mx-auto'
           accessibilityRole="button"
           accessibilityLabel="본인 인증하기"
@@ -52,6 +53,9 @@ export default function WelcomeScreen() {
           </Text>
         </Pressable>
       </ScrollView>
+      <BottomSheet open={open} onClose={() => setOpen(false)}>
+        <Checkbox full checked={true} label="sdfjksfjksjkdfh" />
+      </BottomSheet>
     </SafeAreaView>
   );
 }
